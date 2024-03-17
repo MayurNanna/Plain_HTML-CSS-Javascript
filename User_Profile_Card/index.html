@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Profile Card</title>
+        <link rel="icon" type="image" href="Images/UPC.png">
+        <link rel="stylesheet" href="style.css">                            <!-- External CSS File -->
+    </head>
+    
+<body>
+                    <!--    Registration Form    -->
+        <form id="myForm" onsubmit="Submit(event)">
+        <br>
+        <h1 style="text-align: center;">Register your Information&reg;</h1><br>
+        Enter Name:<br><input type="text" id="name" placeholder="Name"><br><br>
+        Enter your profession:<br><input type="text" id="Profession" placeholder="Your Profession"><br><br>
+        Enter your Company Name:<br><input type="text" id="CName" placeholder="Company Name"><br><br>
+        Enter your Company Address:<br><input type="text" id="CAddress" placeholder="Company Address"><br><br>
+        Enter your Work Experience (in years):<br><input type="number" id="Xp" placeholder="Work Experience"><br><br>
+        Upload Image:<br><input type="file" id="image" accept="image/*"><br><br> <!-- Image upload input -->
+        <button type="submit" onclick="Submit()">Submit</button>
+    </form>
+
+                        <!--    User Profile Card    -->
+    <div class="user hide-details" id="userBox">
+        <img id="profileImage" src="Images/Thalapathy.jpeg" onclick="openinfo()">
+        <div class="info">
+            <img id="OImage" onclick="openinfo()">
+            <h1 style="text-align: left; color: white;" id="Oname">Name:</h1><br><br>
+            <p style="text-align: left; color: white;" id="OProfession">Profession: __________________________</p><br>
+            <p style="text-align: left; color: white;" id="OCName">Company: __________________________</p><br>
+            <p style="text-align: left; color: white;" id="OCAddress">Company Address: __________________________</p><br>
+            <p style="text-align: left; color: white;" id="OXp">Experience of: __________________________</p>
+        </div>
+        <div class="close-icon" onclick="closeinfo()"></div>
+    </div>
+    <script src="script.js"></script>                                           <!-- External script File -->
+</body>
+</html>
